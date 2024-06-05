@@ -84,7 +84,7 @@ a {
   color: white;
   text-decoration: none;
   transform: translateY(20px); /* initially move the container down by 20px */
-  transition: background 0.2s, padding 0.2s; /* added padding transition */
+  transition: background 0.5s, padding 0.2s; /* added transition for background and padding */
   animation: fadeInSlideUpSmall 1s ease-in-out forwards;
 }
 
