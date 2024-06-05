@@ -88,6 +88,7 @@ a {
   position: relative; /* make it relative for pseudo-element positioning */
   overflow: hidden; /* hide overflow of pseudo-element */
   animation: fadeInSlideUpSmall 1s ease-in-out forwards;
+  z-index: 1; /* ensure the button content is on top */
 }
 
 .gradient-button::before {
@@ -101,6 +102,7 @@ a {
   transition: opacity 0.5s; /* smooth transition for opacity */
   opacity: 0; /* initially invisible */
   border-radius: 20px; /* match the border radius */
+  z-index: -1; /* place behind the button content */
 }
 
 .gradient-button:hover::before {
