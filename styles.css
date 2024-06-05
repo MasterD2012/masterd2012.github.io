@@ -44,7 +44,7 @@ body {
 }
 
 .gradient-text {
-  background: linear-gradient(to right, #3495eb, #87CEEB);
+  background: linear-gradient(to right, #FF99A0, #FF2727);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-weight: bold;
@@ -80,14 +80,10 @@ a {
   margin-bottom: 10px; /* Added margin below buttons */
   border: none;
   border-radius: 20px;
-  background: linear-gradient(to right, #3495eb, #3C97FF);
+  background: linear-gradient(to right, #FF5762, #CE0000);
   color: white;
   text-decoration: none;
   transform: translateY(20px); /* initially move the container down by 20px */
   transition: padding 0.2s; /* added padding transition */
   animation: fadeInSlideUpSmall 1s ease-in-out forwards;
-}
-
-.gradient-button:hover {
-  padding: 15px 25px; /* slightly increased padding on hover */
 }
