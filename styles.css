@@ -87,3 +87,7 @@ a {
   transition: padding 0.2s; /* added padding transition */
   animation: fadeInSlideUpSmall 1s ease-in-out forwards;
 }
+
+.gradient-button:hover {
+  background: linear-gradient(to right, #007BFF, #0051A7);
+}
