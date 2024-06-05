@@ -84,10 +84,25 @@ a {
   color: white;
   text-decoration: none;
   transform: translateY(20px); /* initially move the container down by 20px */
-  transition: background 0.5s, padding 0.2s; /* added transition for background and padding */
+  transition: padding 0.2s; /* added padding transition */
+  position: relative; /* make it relative for pseudo-element positioning */
+  overflow: hidden; /* hide overflow of pseudo-element */
   animation: fadeInSlideUpSmall 1s ease-in-out forwards;
 }
 
-.gradient-button:hover {
+.gradient-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   background: linear-gradient(to right, #007BFF, #0051A7);
+  transition: opacity 0.5s; /* smooth transition for opacity */
+  opacity: 0; /* initially invisible */
+  border-radius: 20px; /* match the border radius */
+}
+
+.gradient-button:hover::before {
+  opacity: 1; /* make the pseudo-element visible on hover */
 }
