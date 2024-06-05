@@ -1,0 +1,93 @@
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(to bottom right, #D10000, #920000);
+  font-family: Consolas, Inconsolata, Arial, sans-serif;
+}
+
+@keyframes fadeInSlideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(50px); /* start position */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0); /* end position */
+  }
+}
+
+@keyframes fadeInSlideUpSmall {
+  0% {
+    opacity: 0;
+    transform: translateY(20px); /* start position */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0); /* end position */
+  }
+}
+
+.container {
+  background: linear-gradient(to bottom right, #252525, #151515);
+  border-radius: 15px;
+  padding: 20px;
+  text-align: center;
+  transform: translateY(50px); /* initially move the container down by 50px */
+  animation: fadeInSlideUp 1.5s ease-in-out forwards; /* apply animation */
+}
+
+.content {
+  padding: 20px;
+}
+
+.gradient-text {
+  background: linear-gradient(to right, #3495eb, #87CEEB);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
+  font-family: Consolas, Arial, sans-serif;
+}
+
+h1 {
+  margin: 0;
+  font-family: Consolas, Inconsolata, Arial, sans-serif;
+}
+
+.line {
+  border: none;
+  border-top: 2px solid #ccc;
+  margin: 20px 0;
+}
+
+p {
+  font-family: Consolas, Inconsolata, Arial, sans-serif;
+  color: white;
+}
+
+a {
+  font-family: Consolas, Inconsolata, Arial, sans-serif;
+  color: white;
+}
+
+.gradient-button {
+  display: inline-block;
+  width: 107px; /* Fixed width */
+  padding: 10px 20px;
+  margin-right: 10px; /* Added margin between buttons */
+  margin-bottom: 10px; /* Added margin below buttons */
+  border: none;
+  border-radius: 20px;
+  background: linear-gradient(to right, #3495eb, #3C97FF);
+  color: white;
+  text-decoration: none;
+  transform: translateY(20px); /* initially move the container down by 20px */
+  transition: padding 0.2s; /* added padding transition */
+  animation: fadeInSlideUpSmall 1s ease-in-out forwards;
+}
+
+.gradient-button:hover {
+  padding: 15px 25px; /* slightly increased padding on hover */
+}
