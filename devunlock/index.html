@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Access Restricted</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #e9ecef;
+            color: #333;
+            text-align: center;
+            padding: 50px;
+            margin: 0;
+        }
+        h1 {
+            color: #d9534f;
+            margin-bottom: 30px;
+        }
+        .login-form {
+            display: inline-block;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+        input[type="password"] {
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: 100%;
+            box-sizing: border-box; /* Include padding in width */
+        }
+        button {
+            padding: 10px;
+            background-color: #5bc0de;
+            border: none;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+            width: 100%;
+        }
+        button:hover {
+            background-color: #31b0d5;
+            transform: translateY(-2px);
+        }
+        .error-message {
+            color: red;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Restricted Access</h1>
+    <div class="login-form">
+        <form id="loginForm">
+            <input type="password" id="pinInput" placeholder="Enter your PIN" required>
+            <button type="submit">Log In</button>
+            <div id="errorMessage" class="error-message"></div>
+        </form>
+    </div>
+
+    <script>
+        var correctPin = "#DevelopmentTeamTesting111199996666";
+
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent form submission
+            var pin = document.getElementById('pinInput').value;
+
+            if (pin === correctPin) {
+                window.location.href = "https://masterd2012.github.io/Quoffice2025/index2.html/"; // Redirect to the links page
+            } else {
+                document.getElementById('errorMessage').innerText = "Access Denied: Wrong PIN. Please try again.";
+                document.getElementById('pinInput').value = ''; // Clear the input
+            }
+        });
+    </script>
+</body>
+</html>
