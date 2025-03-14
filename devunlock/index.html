@@ -56,7 +56,7 @@
     <h1>Restricted Access</h1>
     <div class="login-form">
         <form id="loginForm">
-            <input type="password" id="pinInput" placeholder="Enter your PIN" required>
+            <input type="password" id="pinInput" placeholder="Enter your Password" required>
             <button type="submit">Log In</button>
             <div id="errorMessage" class="error-message"></div>
         </form>
@@ -70,9 +70,9 @@
             var pin = document.getElementById('pinInput').value;
 
             if (pin === correctPin) {
-                window.location.href = "https://masterd2012.github.io/Quoffice2025/index2.html/"; // Redirect to the links page
+                window.location.href = "https://masterd2012.github.io/Quoffice2025/index2.html"; // Redirect to the links page
             } else {
-                document.getElementById('errorMessage').innerText = "Access Denied: Wrong PIN. Please try again.";
+                document.getElementById('errorMessage').innerText = "Access Denied: Wrong Password. Please try again.";
                 document.getElementById('pinInput').value = ''; // Clear the input
             }
         });
